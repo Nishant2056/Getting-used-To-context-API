@@ -6,7 +6,13 @@ const ColorBox = () => {
   const colors = ["Blue", "Green", "Gray", "Black", "Transparent", "Pink"];
   return (
     <>
-      <div className="color-box " style={{ backgroundColor: state.color }}>
+      <div
+        className="color-box "
+        style={{
+          backgroundColor: state.color,
+          color: state.color === "Transparent" ? "black" : "white",
+        }}
+      >
         <h1>Color Box</h1>
       </div>
       <div className="color-buttons">
