@@ -14,30 +14,29 @@ const colorReducer = (state, action) => {
 
 const ColorStore = ({ children }) => {
   const [state, dispatch] = useReducer(colorReducer, initialState);
-  const handleBlue = (color) => {
-    dispatch({ type: "SET_COLOR", payload: color });
-  };
-  const handleGreen = (color) => {
-    dispatch({ type: "SET_COLOR", payload: color });
-  };
-  const handleGray = (color) => {
-    dispatch({ type: "SET_COLOR", payload: color });
-  };
-  const handleBlack = (color) => {
-    dispatch({ type: "SET_COLOR", payload: color });
-  };
-  const handleTransparent = (color) => {
+  // const handleBlue = (color) => {
+  //   dispatch({ type: "SET_COLOR", payload: color });
+  // };
+  // const handleGreen = (color) => {
+  //   dispatch({ type: "SET_COLOR", payload: color });
+  // };
+  // const handleGray = (color) => {
+  //   dispatch({ type: "SET_COLOR", payload: color });
+  // };
+  // const handleBlack = (color) => {
+  //   dispatch({ type: "SET_COLOR", payload: color });
+  // };
+  // const handleTransparent = (color) => {
+  //   dispatch({ type: "SET_COLOR", payload: color });
+  // };
+  const setColor = (color) => {
     dispatch({ type: "SET_COLOR", payload: color });
   };
   return (
     <ColorContext.Provider
       value={{
         state,
-        handleBlue,
-        handleGreen,
-        handleGray,
-        handleBlack,
-        handleTransparent,
+        setColor,
       }}
     >
       {children}

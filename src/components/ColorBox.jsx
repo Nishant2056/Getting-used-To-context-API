@@ -2,33 +2,26 @@ import { useContext } from "react";
 import { ColorContext } from "../store/ColorStore.jsx";
 
 const ColorBox = () => {
-  const {
-    state,
-    handleBlue,
-    handleGreen,
-    handleGray,
-    handleBlack,
-    handleTransparent,
-  } = useContext(ColorContext);
+  const { state, setColor } = useContext(ColorContext);
   return (
     <>
       <div className="color-box " style={{ backgroundColor: state.color }}>
         <h1>Color Box</h1>
       </div>
       <div className="color-buttons">
-        <button type="button" onClick={() => handleBlue("Blue")}>
+        <button type="button" onClick={() => setColor("Blue")}>
           Change Blue
         </button>
-        <button type="button" onClick={() => handleGreen("Green")}>
+        <button type="button" onClick={() => setColor("Green")}>
           Change Green
         </button>
-        <button type="button" onClick={() => handleGray("Gray")}>
+        <button type="button" onClick={() => setColor("Gray")}>
           Change Gray
         </button>
-        <button type="button" onClick={() => handleBlack("Black")}>
+        <button type="button" onClick={() => setColor("Black")}>
           Change Black
         </button>
-        <button type="button" onClick={() => handleTransparent("Transparent")}>
+        <button type="button" onClick={() => setColor("Transparent")}>
           Change Transparent
         </button>
       </div>
